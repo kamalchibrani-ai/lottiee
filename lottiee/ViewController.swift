@@ -7,12 +7,19 @@
 //
 
 import UIKit
-
+import Lottie
 class ViewController: UIViewController {
 
+    @IBOutlet private var animationView: LOTAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      startAnimation()
+    }
+    
+    func startAnimation(){
+        animationView.setAnimation(named: "india")
+        animationView.loopAnimation = true
+        animationView.play()
     }
 
 
